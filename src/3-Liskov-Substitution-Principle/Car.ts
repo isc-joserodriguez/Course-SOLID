@@ -1,6 +1,11 @@
-export default class Car {
+import Vehicle from "./Vehicle";
+
+export default class Car extends Vehicle {
+  getInteriorWidth(): number {
+    return this.getCabinWidth();
+  }
   getCabinWidth(): number {
     // return cabin width
-    return 120;
+    return Number();
   }
 }
