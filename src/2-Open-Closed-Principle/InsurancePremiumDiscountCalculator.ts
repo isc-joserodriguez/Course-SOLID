@@ -1,9 +1,8 @@
-import HealthInsuranceCustomerProfile from "./HealthInsuranceCustomerProfile";
-import VehicleInsuranceCustomerProfile from "./VehicleInsuranceCustomerProfile";
+import ICustomerProfile from "./ICustomerProfile";
 
 export default class InsurancePremiumDiscountCalculator {
   calculatePremiumDiscountPercent(
-    customer: HealthInsuranceCustomerProfile | VehicleInsuranceCustomerProfile
+    customer: ICustomerProfile
   ): number {
     return customer.isLoyalCustomer() ? 20 : 0;
   }
