@@ -1,6 +1,8 @@
-import IMultiFunction from "./IMultiFunction";
+import IFax from "./IFax";
+import IPrint from "./IPrint";
+import IScan from "./IScan";
 
-export default class MachineWorkCentre implements IMultiFunction {
+export default class MachineWorkCentre implements IPrint, IScan, IFax {
   print(): void {
     // Asume real and functional code
   }

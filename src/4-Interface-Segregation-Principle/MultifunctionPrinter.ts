@@ -1,6 +1,7 @@
-import IMultiFunction from "./IMultiFunction";
+import IPrint from "./IPrint";
+import IScan from "./IScan";
 
-export default class MultifunctionPrinter implements IMultiFunction {
+export default class MultifunctionPrinter implements IPrint, IScan {
   print(): void {
     // Asume real and functional code
   }
@@ -12,11 +13,5 @@ export default class MultifunctionPrinter implements IMultiFunction {
   }
   scanPhoto(): void {
     // Asume real and functional code
-  }
-  fax(): void {
-    throw new Error("Method not implemented.");
-  }
-  internetFax(): void {
-    throw new Error("Method not implemented.");
   }
 }
