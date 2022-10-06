@@ -1,13 +1,14 @@
-import ProductFactory from "./ProductFactory";
 import ProductRepository from "./ProductRepository";
 
 export default class ProductCatalog {
+  private productRepository: ProductRepository;
+  constructor(productRepository: ProductRepository) {
+    this.productRepository = productRepository;
+  }
+
   listAllProducts(): void {
-    const productRepository: ProductRepository = ProductFactory.create();
-
     const allProductNames: Array<string> =
-      productRepository.getAllProductNames();
-
+      this.productRepository.getAllProductNames();
     // Display product names
   }
 }
